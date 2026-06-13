@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LEVIANT</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main id="app" class="app">
+      <section id="gameFrame" class="game-frame" aria-label="LEVIANT game">
+        <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+        <div id="hud" class="hud hidden">
+          <div class="hud-block">
+            <span id="hudMetric">SCORE 0</span>
+            <span id="hudBest">BEST 0</span>
+          </div>
+          <div class="hud-block hud-center">
+            <span id="hudWorld">SPACE</span>
+            <span id="hudPhase">READY</span>
+          </div>
+          <div class="hud-block hud-right">
+            <span id="hudStatus">HP 3</span>
+            <span id="hudDifficulty">NORMAL</span>
+          </div>
+        </div>
+
+        <section id="titleScreen" class="screen">
+          <div class="brand">
+            <p class="brand-kicker">NEON ARCADE PROTOCOL</p>
+            <h1>LEVIANT</h1>
+          </div>
+          <div class="menu-stack">
+            <button id="startBtn" class="primary-btn" type="button">START</button>
+            <button id="fullscreenBtn" class="ghost-btn" type="button">FULLSCREEN</button>
+          </div>
+          <div class="option-row">
+            <button id="bgmToggle" class="mini-btn" type="button">BGM ON</button>
+            <button id="sfxToggle" class="mini-btn" type="button">SFX ON</button>
+          </div>
+          <div id="recordsPanel" class="records-panel"></div>
+        </section>
+
+        <section id="modeScreen" class="screen hidden">
+          <div class="screen-head">
+            <p class="brand-kicker">SELECT MODE</p>
+            <h2>LEVIANT</h2>
+          </div>
+          <div class="choice-grid">
+            <button id="shootingBtn" class="mode-card" type="button">
+              <strong>SHOOTING</strong>
+              <span>VERTICAL NEON COMBAT</span>
+            </button>
+            <button id="runnerBtn" class="mode-card" type="button">
+              <strong>RUNNER</strong>
+              <span>PHYSICAL NEON RUN</span>
+            </button>
+          </div>
+          <button class="ghost-btn back-title" type="button" data-go-title>BACK</button>
+        </section>
+
+        <section id="difficultyScreen" class="screen hidden">
+          <div class="screen-head">
+            <p id="difficultyModeLabel" class="brand-kicker">SHOOTING</p>
+            <h2>DIFFICULTY</h2>
+          </div>
+          <div class="difficulty-grid">
+            <button class="difficulty-card" type="button" data-difficulty="easy">
+              <strong>EASY</strong>
+              <span>x1.00</span>
+            </button>
+            <button class="difficulty-card" type="button" data-difficulty="normal">
+              <strong>NORMAL</strong>
+              <span>x1.25</span>
+            </button>
+            <button class="difficulty-card" type="button" data-difficulty="hard">
+              <strong>HARD</strong>
+              <span>x1.60</span>
+            </button>
+          </div>
+          <button id="backModeBtn" class="ghost-btn" type="button">BACK</button>
+        </section>
+
+        <section id="pauseScreen" class="screen compact hidden">
+          <div class="screen-head">
+            <p class="brand-kicker">SYSTEM HOLD</p>
+            <h2>PAUSED</h2>
+          </div>
+          <div class="menu-stack">
+            <button id="resumeBtn" class="primary-btn" type="button">RESUME</button>
+            <button id="pauseModeBtn" class="ghost-btn" type="button">MODE SELECT</button>
+            <button class="ghost-btn" type="button" data-go-title>TITLE</button>
+          </div>
+        </section>
+
+        <section id="gameoverScreen" class="screen compact hidden">
+          <div class="screen-head">
+            <p id="gameoverMode" class="brand-kicker">RUN COMPLETE</p>
+            <h2>GAME OVER</h2>
+          </div>
+          <div class="result-panel">
+            <span id="resultScore">SCORE 0</span>
+            <span id="resultBest">BEST 0</span>
+          </div>
+          <div class="menu-stack">
+            <button id="restartBtn" class="primary-btn" type="button">RESTART</button>
+            <button id="gameoverModeBtn" class="ghost-btn" type="button">MODE SELECT</button>
+            <button class="ghost-btn" type="button" data-go-title>TITLE</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
