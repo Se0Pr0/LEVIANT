@@ -99,45 +99,6 @@ Windows에서 `python3` 명령이 없으면:
 py -m http.server 8000
 ```
 
-## 배포 방법
-
-이 프로젝트는 정적 파일만 사용하는 게임이므로 `index.html`, `style.css`, `game.js`만 업로드하면 배포할 수 있습니다.
-
-### GitHub Pages
-
-1. GitHub 저장소를 만듭니다.
-2. 이 프로젝트의 파일을 저장소에 업로드합니다.
-3. 저장소 `Settings` -> `Pages`로 이동합니다.
-4. `Deploy from a branch`를 선택합니다.
-5. 브랜치는 `main`, 폴더는 `/root`를 선택합니다.
-6. 저장하면 GitHub Pages 주소가 생성됩니다.
-
-### Netlify
-
-1. Netlify에서 새 사이트를 만듭니다.
-2. 프로젝트 폴더를 드래그 앤 드롭으로 업로드합니다.
-3. 빌드 명령은 비워둡니다.
-4. Publish directory는 루트 폴더를 사용합니다.
-
-### Vercel
-
-1. Vercel에서 새 프로젝트를 만듭니다.
-2. 이 프로젝트 폴더 또는 GitHub 저장소를 연결합니다.
-3. Framework Preset은 `Other`로 둡니다.
-4. Build Command는 비워둡니다.
-5. Output Directory는 비워두거나 루트로 설정합니다.
-
-## 파일 구조
-
-```text
-.
-├── AGENTS.md
-├── README.md
-├── index.html
-├── style.css
-└── game.js
-```
-
 ## 참고
 
 - 사운드는 브라우저 정책상 첫 클릭이나 키 입력 이후 재생됩니다.
